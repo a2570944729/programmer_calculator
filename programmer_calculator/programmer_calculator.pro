@@ -17,13 +17,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     CheckBoxClass.cpp \
-    TextEditClass.cpp \
+    StingToolClass.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     CheckBoxClass.h \
-    TextEditClass.h \
+    StingToolClass.h \
     mainwindow.h
 
 FORMS += \

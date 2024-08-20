@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <TextEditClass.h>
+#include <StingToolClass.h>
 #include <CheckBoxClass.h>
 
 QT_BEGIN_NAMESPACE
@@ -31,11 +31,13 @@ private slots:
 private:
     Ui::MainWindow *ui;
     /*********第一个功能页对象***********/
-    TextEditClass *TextEditProessPage_1;  // 输入输出框的处理流程
+    StingToolClass *TextEditProessPage_1;  // 输入输出框的处理流程
     CheckBoxClass *Check_box_add_prefix;  //前缀标识符
     CheckBoxClass *Check_box_add_space;   //空格标识符
-
     /**********************************/
+
+    /*********第二个功能页对象***********/
+
 
 };
 #endif // MAINWINDOW_H
