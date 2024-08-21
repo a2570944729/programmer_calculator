@@ -161,8 +161,10 @@ void StingToolClass::HexToStingHaveSpace() const
     QStringList hexStrings = inputText.split(' ');
     // 处理每一个十六进制字符串，并将其转换为字符
     QString outputText;
-    for (const QString &hexStr : hexStrings) {
-        if (!hexStr.isEmpty()) {
+    for (const QString &hexStr : hexStrings)
+    {
+        if (!hexStr.isEmpty())
+        {
             // 移除可能的 "0x" 前缀
             QString hex = hexStr.startsWith("0x") ? hexStr.mid(2) : hexStr;
             // 转换十六进制字符串为整数
@@ -170,7 +172,8 @@ void StingToolClass::HexToStingHaveSpace() const
             // 将整数转换为字符
             outputText += QChar(value);
             // 添加空格，但最后一个字符后面不加空格
-            if (hexStr != hexStrings.last()) {
+            if (&hexStr != &hexStrings.last())//这里需要&才能正常进入，否则需要在输入时的最后加空格
+            {
                 outputText += ' ';
             }
         }

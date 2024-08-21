@@ -44,7 +44,13 @@
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
     </property>
     <widget class="QWidget" name="tab_string_tool">
      <attribute name="title">
@@ -147,8 +153,14 @@
       <property name="text">
        <string>输出字符隔开 </string>
       </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
      </widget>
-     <widget class="QPushButton" name="clear_all">
+     <widget class="QPushButton" name="clear_all_page1">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -222,7 +234,7 @@
      <zorder>set_label</zorder>
      <zorder>add_0x_prefix</zorder>
      <zorder>add_space</zorder>
-     <zorder>clear_all</zorder>
+     <zorder>clear_all_page1</zorder>
      <zorder>get_byte_len</zorder>
      <zorder>input_label</zorder>
      <zorder>output_label</zorder>
@@ -251,7 +263,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit">
+          <widget class="QTextEdit" name="hex_textedit">
            <property name="font">
             <font>
              <family>Adobe Arabic</family>
@@ -265,14 +277,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="dec_label">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;DEC:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit_2">
+          <widget class="QTextEdit" name="dec_textedit">
            <property name="font">
             <font>
              <family>Adobe Arabic</family>
@@ -286,14 +298,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="bin_label">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;BIN:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit_6">
+          <widget class="QTextEdit" name="bin_textedit">
            <property name="font">
             <font>
              <family>Adobe Arabic</family>
@@ -307,14 +319,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
-          <widget class="QLabel" name="hex_label_3">
+          <widget class="QLabel" name="oct_label">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;OCT:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit_3">
+          <widget class="QTextEdit" name="oct_textedit">
            <property name="font">
             <font>
              <family>Adobe Arabic</family>
@@ -328,14 +340,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_16">
          <item>
-          <widget class="QLabel" name="hex_label_9">
+          <widget class="QLabel" name="bit_reversal_label">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;位反:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit_15">
+          <widget class="QTextEdit" name="bit_reversal_textedit">
            <property name="font">
             <font>
              <family>Adobe Arabic</family>
@@ -349,14 +361,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_15">
          <item>
-          <widget class="QLabel" name="hex_label_8">
+          <widget class="QLabel" name="opposite_num_label">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;反码:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="textEdit_14">
+          <widget class="QTextEdit" name="opposite_num_textedit">
            <property name="font">
             <font>
              <family>Adobe Arabic</family>
@@ -369,7 +381,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="tips_label_5">
+     <widget class="QLabel" name="tips_label">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -394,7 +406,7 @@
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="tips_detail_label">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -408,6 +420,19 @@
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="clear_all_page2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>440</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>清除</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_instruction">
      <attribute name="title">
@@ -420,7 +445,4 @@
  </widget>
  <resources/>
  <connections/>
- <buttongroups>
-  <buttongroup name="buttonGroup"/>
- </buttongroups>
 </ui>

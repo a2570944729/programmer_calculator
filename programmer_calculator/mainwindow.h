@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <StingToolClass.h>
 #include <CheckBoxClass.h>
+#include <BaseConversionClass.h>
+#include <StingToolClass.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,13 +22,23 @@ public:
 private slots:
     void on_hex_to_string_clicked();
 
-    void on_clear_all_clicked();
-
     void on_string_to_tab_clicked();
 
     void on_get_sting_len_clicked();
 
     void on_get_byte_len_clicked();
+
+    void on_clear_all_page1_clicked();
+
+    void on_hex_textedit_textChanged();
+
+    void on_dec_textedit_textChanged();
+
+    void on_bin_textedit_textChanged();
+
+    void on_oct_textedit_textChanged();
+
+    void on_clear_all_page2_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -37,7 +49,7 @@ private:
     /**********************************/
 
     /*********第二个功能页对象***********/
-
+    BaseConversionClass *TextEditProessPage_2;
 
 };
 #endif // MAINWINDOW_H
