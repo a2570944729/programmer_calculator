@@ -30,6 +30,10 @@ private:
     QTextEdit *OppositeNumTextEdit;
 
     QMap<QString, QString> TextEditData;
+    void onTextChanged(const QString &text, const QString &baseType);
+    void invertBits(long value);
+    QString invertBits(const QString &binaryString);
+    QString formatBinary(const QString &binaryString, bool isBinaryInput);
 };
 
 

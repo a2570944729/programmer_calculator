@@ -62,3 +62,95 @@ void MainWindow::on_clear_all_page1_clicked()
 {
      TextEditProessPage_1->ClearAllTextEdit();
 }
+
+void MainWindow::on_clear_all_page2_clicked()
+{
+    // 阻止其他文本框的信号
+    ui->hex_textedit->blockSignals(true);
+    ui->dec_textedit->blockSignals(true);
+    ui->bin_textedit->blockSignals(true);
+    ui->oct_textedit->blockSignals(true);
+    ui->bit_reversal_textedit->blockSignals(true);
+    ui->opposite_num_textedit->blockSignals(true);
+    TextEditProessPage_2->ClearAll();
+    // 恢复其他文本框的信号
+    ui->hex_textedit->blockSignals(false);
+    ui->dec_textedit->blockSignals(false);
+    ui->bin_textedit->blockSignals(false);
+    ui->oct_textedit->blockSignals(false);
+    ui->bit_reversal_textedit->blockSignals(false);
+    ui->opposite_num_textedit->blockSignals(false);
+}
+
+void MainWindow::on_hex_textedit_textChanged()
+{
+    ui->hex_textedit->blockSignals(true);
+    ui->dec_textedit->blockSignals(true);
+    ui->bin_textedit->blockSignals(true);
+    ui->oct_textedit->blockSignals(true);
+    ui->bit_reversal_textedit->blockSignals(true);
+    ui->opposite_num_textedit->blockSignals(true);
+    TextEditProessPage_2->UpdateHexText();
+    TextEditProessPage_2->updateTextEditWithConvertedData();
+    ui->hex_textedit->blockSignals(false);
+    ui->dec_textedit->blockSignals(false);
+    ui->bin_textedit->blockSignals(false);
+    ui->oct_textedit->blockSignals(false);
+    ui->bit_reversal_textedit->blockSignals(false);
+    ui->opposite_num_textedit->blockSignals(false);
+}
+void MainWindow::on_dec_textedit_textChanged()
+{
+    ui->hex_textedit->blockSignals(true);
+    ui->dec_textedit->blockSignals(true);
+    ui->bin_textedit->blockSignals(true);
+    ui->oct_textedit->blockSignals(true);
+    ui->bit_reversal_textedit->blockSignals(true);
+    ui->opposite_num_textedit->blockSignals(true);
+    TextEditProessPage_2->UpdateDecText();
+    TextEditProessPage_2->updateTextEditWithConvertedData();
+    ui->hex_textedit->blockSignals(false);
+    ui->dec_textedit->blockSignals(false);
+    ui->bin_textedit->blockSignals(false);
+    ui->oct_textedit->blockSignals(false);
+    ui->bit_reversal_textedit->blockSignals(false);
+    ui->opposite_num_textedit->blockSignals(false);
+
+}
+
+void MainWindow::on_bin_textedit_textChanged()
+{
+    ui->hex_textedit->blockSignals(true);
+    ui->dec_textedit->blockSignals(true);
+    ui->bin_textedit->blockSignals(true);
+    ui->oct_textedit->blockSignals(true);
+    ui->bit_reversal_textedit->blockSignals(true);
+    ui->opposite_num_textedit->blockSignals(true);
+    TextEditProessPage_2->UpdateBinText();
+    TextEditProessPage_2->updateTextEditWithConvertedData();
+    ui->hex_textedit->blockSignals(false);
+    ui->dec_textedit->blockSignals(false);
+    ui->bin_textedit->blockSignals(false);
+    ui->oct_textedit->blockSignals(false);
+    ui->bit_reversal_textedit->blockSignals(false);
+    ui->opposite_num_textedit->blockSignals(false);
+}
+
+void MainWindow::on_oct_textedit_textChanged()
+{
+    ui->hex_textedit->blockSignals(true);
+    ui->dec_textedit->blockSignals(true);
+    ui->bin_textedit->blockSignals(true);
+    ui->oct_textedit->blockSignals(true);
+    ui->bit_reversal_textedit->blockSignals(true);
+    ui->opposite_num_textedit->blockSignals(true);
+    TextEditProessPage_2->UpdateOctText();
+    TextEditProessPage_2->updateTextEditWithConvertedData();
+    ui->hex_textedit->blockSignals(false);
+    ui->dec_textedit->blockSignals(false);
+    ui->bin_textedit->blockSignals(false);
+    ui->oct_textedit->blockSignals(false);
+    ui->bit_reversal_textedit->blockSignals(false);
+    ui->opposite_num_textedit->blockSignals(false);
+
+}

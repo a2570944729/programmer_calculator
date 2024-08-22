@@ -40,6 +40,10 @@ private slots:
 
     void on_clear_all_page2_clicked();
 
+    void on_bit_reversal_textedit_textChanged();
+
+    void on_opposite_num_textedit_textChanged();
+
 private:
     Ui::MainWindow *ui;
     /*********第一个功能页对象***********/

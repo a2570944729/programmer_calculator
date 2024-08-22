@@ -12,14 +12,26 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>679</width>
+    <height>564</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>679</width>
+    <height>564</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -31,9 +43,21 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>681</width>
-      <height>561</height>
+      <width>679</width>
+      <height>564</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>679</width>
+      <height>564</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>679</width>
+      <height>564</height>
+     </size>
     </property>
     <property name="styleSheet">
      <string notr="true">QTabBar::tab {
@@ -400,7 +424,7 @@
         <x>510</x>
         <y>30</y>
         <width>151</width>
-        <height>121</height>
+        <height>211</height>
        </rect>
       </property>
       <property name="title">
@@ -412,11 +436,11 @@
          <x>10</x>
          <y>10</y>
          <width>131</width>
-         <height>91</height>
+         <height>191</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;请直接在对应窗口内&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;输入合法数值，多个&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;数值采用空格间隔开&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;请直接在对应窗口内&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;输入合法数值，多个&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;数值采用空格间隔开&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;位反和反码不可输入&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
