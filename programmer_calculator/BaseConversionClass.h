@@ -10,7 +10,7 @@ public:
                                  QTextEdit *BinTextEdit,
                                  QTextEdit *OctTextEdit,
                                  QTextEdit *BitReversalTextEdit,
-                                 QTextEdit *OppositeNumTextEdit);
+                                 QTextEdit *ComplementNumTextEdit);
     ~BaseConversionClass();
     void ClearAll();
     void UpdateHexText();
@@ -18,7 +18,7 @@ public:
     void UpdateBinText();
     void UpdateOctText();
     void UpdateBitReversalText();
-    void UpdateOppositeNumText();
+    void UpdateComplementNumText();
     void updateTextEditWithConvertedData(); // Slot to update the text edits with the data
 
 private:
@@ -27,13 +27,15 @@ private:
     QTextEdit *BinTextEdit;
     QTextEdit *OctTextEdit;
     QTextEdit *BitReversalTextEdit;
-    QTextEdit *OppositeNumTextEdit;
+    QTextEdit *ComplementNumTextEdit;
 
     QMap<QString, QString> TextEditData;
     void onTextChanged(const QString &text, const QString &baseType);
     void invertBits(long value);
     QString invertBits(const QString &binaryString);
     QString formatBinary(const QString &binaryString, bool isBinaryInput);
+    QString ComplementNum(const QString &binaryString);
+    QString formatBinaryString(const QString &binaryString);
 };
 
 

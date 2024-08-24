@@ -13,7 +13,7 @@ BaseConversionClass::BaseConversionClass(QTextEdit *HexTextEdit,
                      BinTextEdit(BinTextEdit),
                      OctTextEdit(OctTextEdit),
                      BitReversalTextEdit(BitReversalTextEdit),
-                     OppositeNumTextEdit(OppositeNumTextEdit),
+                     ComplementNumTextEdit(OppositeNumTextEdit),
                      TextEditData()
 {
     BitReversalTextEdit->setReadOnly(true);
@@ -59,9 +59,9 @@ void BaseConversionClass::UpdateBitReversalText()
     onTextChanged(TextEditData["bit_reversal"], "bit_reversal"); // 这里可能不需要转换
 }
 
-void BaseConversionClass::UpdateOppositeNumText()
+void BaseConversionClass::UpdateComplementNumText()
 {
-    TextEditData["opposite_num"] = OppositeNumTextEdit->toPlainText();
+    TextEditData["opposite_num"] = ComplementNumTextEdit->toPlainText();
     onTextChanged(TextEditData["opposite_num"], "opposite_num"); // 这里可能不需要转换
 }
 
@@ -81,7 +81,7 @@ void BaseConversionClass::ClearAll()
     BinTextEdit->clear();
     OctTextEdit->clear();
     BitReversalTextEdit->clear();
-    OppositeNumTextEdit->clear();
+   ComplementNumTextEdit->clear();
 }
 
 
@@ -102,8 +102,8 @@ void BaseConversionClass::updateTextEditWithConvertedData()
     BitReversalTextEdit->setText(TextEditData["bit_reversal"]);
     BitReversalTextEdit->moveCursor(QTextCursor::End);
 
-    OppositeNumTextEdit->setText(TextEditData["opposite_num"]);
-    OppositeNumTextEdit->moveCursor(QTextCursor::End);
+    ComplementNumTextEdit->setText(TextEditData["opposite_num"]);
+    ComplementNumTextEdit->moveCursor(QTextCursor::End);
 }
 
 void BaseConversionClass::onTextChanged(const QString &text, const QString &baseType)
@@ -127,7 +127,7 @@ void BaseConversionClass::onTextChanged(const QString &text, const QString &base
         TextEditData["bin"] = QString::number(value, 2);
         TextEditData["oct"] = QString::number(value, 8);
         TextEditData["bit_reversal"] = invertBits(TextEditData["bin"]); // 按位取反
-        TextEditData["opposite_num"] = QString::number(-value, 10);
+        TextEditData["opposite_num"] = invertBits(TextEditData["bin"])+0b1;
 
         // 更新UI
         updateTextEditWithConvertedData();
@@ -156,6 +156,37 @@ QString BaseConversionClass::invertBits(const QString &binaryString)
 
         // 将取反后的位放入结果中
         result |= (invertedBit << (bitWidth - 1 - i));
+    }
+
+    // 将结果转换为字符串
+    QString invertedBinary = QString::number(result, 2);
+
+    // 保留位宽
+    invertedBinary = invertedBinary.rightJustified(bitWidth, '0');
+
+    return invertedBinary;
+}
+
+// 新增补码函数
+QString BaseConversionClass::ComplementNum(const QString &binaryString)
+{
+    // 确定位宽
+    int bitWidth = binaryString.length(); // 位宽等于输入二进制字符串的长度
+
+    // 创建一个足够大的无符号整数来容纳位反转后的结果
+    unsigned long result = 0;
+
+    // 位反转
+    for (int i = 0; i < bitWidth; ++i) {
+        // 取出当前位
+        bool bit = (binaryString[i] == '1');
+
+        // 取反
+        bool invertedBit = !bit;
+
+        // 将取反后的位放入结果中
+        result |= (invertedBit << (bitWidth - 1 - i));
+
     }
 
     // 将结果转换为字符串
