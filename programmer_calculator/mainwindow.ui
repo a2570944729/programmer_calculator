@@ -249,6 +249,32 @@
        <string>输出窗口：</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="set_uppercase">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>400</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转换大写</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="set_lowercase">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转换小写</string>
+      </property>
+     </widget>
      <zorder>set</zorder>
      <zorder>hex_to_string</zorder>
      <zorder>output_page_1</zorder>
@@ -262,6 +288,8 @@
      <zorder>get_byte_len</zorder>
      <zorder>input_label</zorder>
      <zorder>output_label</zorder>
+     <zorder>set_uppercase</zorder>
+     <zorder>set_lowercase</zorder>
     </widget>
     <widget class="QWidget" name="tab_conversion">
      <attribute name="title">

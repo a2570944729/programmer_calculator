@@ -154,3 +154,13 @@ void MainWindow::on_oct_textedit_textChanged()
     ui->opposite_num_textedit->blockSignals(false);
 
 }
+
+void MainWindow::on_set_uppercase_clicked()
+{
+    TextEditProessPage_1->StingToUpper();
+}
+
+void MainWindow::on_set_lowercase_clicked()
+{
+    TextEditProessPage_1->StingToLower();
+}

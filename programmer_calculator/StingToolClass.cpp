@@ -182,3 +182,36 @@ void StingToolClass::HexToStingHaveSpace() const
     OutputTextEdit->setText(outputText);
 }
 
+/*********************************************************************************************************
+函数名称：StingToUpper
+功能描述：字符串转大写
+输入参数：无
+返 回 值：无
+作    者：LinPeiFeng
+日    期：2024.09.07
+备    注：将输入的英文字符串转换为全大写形式
+*********************************************************************************************************/
+void StingToolClass::StingToUpper() const
+{
+    QString text = InputTextEdit->toPlainText();  // 获取输入QTextEdit中的文本
+    QString upperText = text.toUpper();  // 转换为大写
+
+    OutputTextEdit->setText(upperText);  // 将大写字符串写入到输出QTextEdit
+}
+
+/*********************************************************************************************************
+函数名称：StingToLower
+功能描述：字符串转小写
+输入参数：无
+返 回 值：无
+作    者：LinPeiFeng
+日    期：2024.09.07
+备    注：将输入的英文字符串转换为全小写形式
+*********************************************************************************************************/
+void StingToolClass::StingToLower() const
+{
+    QString text = InputTextEdit->toPlainText();  // 获取输入QTextEdit中的文本
+    QString lowerText = text.toLower();  // 转换为小写
+
+    OutputTextEdit->setText(lowerText);  // 将小写字符串写入到输出QTextEdit
+}

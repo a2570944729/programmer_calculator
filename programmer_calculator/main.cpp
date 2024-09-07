@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
     QFileInfo exeInfo(exePath);
     // 构建图片文件的路径
     QString imagePath = exeInfo.absolutePath() + "/picture/calculator.png";
-
     // 检查文件是否存在
+    /*
     if (!QFile::exists(imagePath)) {
         return -1;
-    }
+    }*/
     // 创建一个QIcon对象并加载图片
     QIcon icon(imagePath);
 

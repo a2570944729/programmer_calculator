@@ -17,7 +17,8 @@ public:
     void ClearAllTextEdit() const;
     void HexToStingNoSpace() const;
     void HexToStingHaveSpace() const;
-
+    void StingToUpper() const;
+    void StingToLower() const;
 private:
     QTextEdit *InputTextEdit;  // 指向输入QTextEdit的指针
     QTextEdit *OutputTextEdit;  // 指向输出QTextEdit的指针
