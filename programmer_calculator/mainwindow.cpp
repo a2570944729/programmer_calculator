@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <StingToolClass.h>
 #include <CheckBoxClass.h>
+#include <QClipboard>
 #include <BaseConversionClass.h>
 #include <QDebug>
 
@@ -163,4 +164,16 @@ void MainWindow::on_set_uppercase_clicked()
 void MainWindow::on_set_lowercase_clicked()
 {
     TextEditProessPage_1->StingToLower();
+}
+
+void MainWindow::on_copy_all_page1_clicked()
+{
+    // 获取QTextBrowser中的文本
+        QString text = ui->output_page_1->toPlainText(); // 如果你想要复制所有的文本
+
+        // 获取系统剪贴板
+        QClipboard *clipboard = QApplication::clipboard();
+
+        // 将文本复制到剪贴板
+        clipboard->setText(text);
 }

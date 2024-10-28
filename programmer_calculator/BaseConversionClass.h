@@ -19,7 +19,7 @@ public:
     void UpdateOctText();
     void UpdateBitReversalText();
     void UpdateComplementNumText();
-    void updateTextEditWithConvertedData(); // Slot to update the text edits with the data
+    void updateTextEditWithConvertedData();
 
 private:
     QTextEdit *HexTextEdit;

@@ -44,6 +44,8 @@ private slots:
 
     void on_set_lowercase_clicked();
 
+    void on_copy_all_page1_clicked();
+
 private:
     Ui::MainWindow *ui;
     /*********第一个功能页对象***********/
